@@ -11,7 +11,7 @@ import {
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SnailFormComponent } from './components/snail/snail.component';
-import { LoginFormComponent } from './components/login/login-form.component';
+import { LoginFormComponent } from './components/login/login.component';
 import { SnailService } from './services/snail.service';
 import { HttpClientModule } from '@angular/common/http';
 
