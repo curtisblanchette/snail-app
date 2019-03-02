@@ -9,7 +9,10 @@ import { SnailService } from '../../services/snail.service';
 })
 export class SnailFormComponent implements OnInit {
 
-
+  wellHeight = new FormControl('');
+  initialClimb = new FormControl('');
+  nightlySlide = new FormControl('');
+  fatigue = new FormControl('');
 
   constructor(
     private snailService: SnailService
@@ -18,22 +21,13 @@ export class SnailFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.heroForm = new FormGroup({
-      'name': new FormControl(this.hero.name, [
-        Validators.required,
-        Validators.minLength(4),
-        forbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom validator.
-      ]),
-      'alterEgo': new FormControl(this.hero.alterEgo),
-      'power': new FormControl(this.hero.power, Validators.required)
-    });
   }
 
   solveProblem(): any {
     this.snailService.solveProblem(this.wellHeight.value, this.initialClimb.value, this.nightlySlide.value, this.fatigue.value)
       .subscribe((result) => {
         console.log(result);
-    });
+      });
   }
 
 }
