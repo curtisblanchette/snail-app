@@ -27,7 +27,7 @@ export class SnailFormComponent implements OnInit {
     this.snailService.solveProblem(this.wellHeight.value, this.initialClimb.value, this.nightlySlide.value, this.fatigue.value)
       .subscribe((result) => {
         console.log(result);
-    });
+      });
   }
 
 }
