@@ -14,7 +14,6 @@ import { SnailFormComponent } from './components/snail/snail.component';
 import { SnailService } from './services/snail.service';
 import { HttpClientModule } from '@angular/common/http';
 
-
 @NgModule({
   declarations: [
     AppComponent,
