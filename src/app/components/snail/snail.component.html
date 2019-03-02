@@ -1,4 +1,5 @@
 <mat-card>
+
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <input matInput type="number" min="" placeholder="Well Height" [formControl]="wellHeight">
@@ -17,5 +18,6 @@
     </mat-form-field>
 
     <button mat-button (click)="solveProblem()">Solve</button>
+    <h1 class="">{{result}}</h1>
   </form>
 </mat-card>

@@ -9,15 +9,16 @@ import { SnailService } from '../../services/snail.service';
 })
 export class SnailFormComponent implements OnInit {
 
-  wellHeight = new FormControl('');
-  initialClimb = new FormControl('');
-  nightlySlide = new FormControl('');
-  fatigue = new FormControl('');
+  private wellHeight = new FormControl('');
+  private initialClimb = new FormControl('');
+  private nightlySlide = new FormControl('');
+  private fatigue = new FormControl('');
+  private result = [];
 
   constructor(
     private snailService: SnailService
   ) {
-
+    this.result = null;
   }
 
   ngOnInit() {
@@ -26,7 +27,7 @@ export class SnailFormComponent implements OnInit {
   solveProblem(): any {
     this.snailService.solveProblem(this.wellHeight.value, this.initialClimb.value, this.nightlySlide.value, this.fatigue.value)
       .subscribe((result) => {
-        console.log(result);
+        this.result = result;
       });
   }
 
