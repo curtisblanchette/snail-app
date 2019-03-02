@@ -11,7 +11,6 @@ import {
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SnailFormComponent } from './components/snail/snail.component';
-import { LoginFormComponent } from './components/login/login-form.component';
 import { SnailService } from './services/snail.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     SnailFormComponent,
-    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
