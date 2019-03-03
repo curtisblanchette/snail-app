@@ -29,29 +29,29 @@
           <td mat-cell *matCellDef="let element"> {{element.endpoint}} </td>
         </ng-container>
 
-        <!-- WellHeight Column -->
-        <!--<ng-container matColumnDef="wellHeight">-->
-          <!--<th mat-header-cell *matHeaderCellDef> wellHeight </th>-->
-          <!--<td mat-cell *matCellDef="let element"> {{element.requestBody.wellHeight}} </td>-->
-        <!--</ng-container>-->
+         <!--WellHeight Column-->
+        <ng-container matColumnDef="wellHeight">
+          <th mat-header-cell *matHeaderCellDef> wellHeight </th>
+          <td mat-cell *matCellDef="let element"> {{element.requestBody.wellHeight}} </td>
+        </ng-container>
 
-        <!--&lt;!&ndash; initialClimb Column &ndash;&gt;-->
-        <!--<ng-container matColumnDef="initialClimb">-->
-          <!--<th mat-header-cell *matHeaderCellDef> initialClimb </th>-->
-          <!--<td mat-cell *matCellDef="let element"> {{element.requestBody.initialClimb}} </td>-->
-        <!--</ng-container>-->
+        <!-- initialClimb Column -->
+        <ng-container matColumnDef="initialClimb">
+          <th mat-header-cell *matHeaderCellDef> initialClimb </th>
+          <td mat-cell *matCellDef="let element"> {{element.requestBody.initialClimb}} </td>
+        </ng-container>
 
-        <!--&lt;!&ndash; nightlySlide Column &ndash;&gt;-->
-        <!--<ng-container matColumnDef="nightlySlide">-->
-          <!--<th mat-header-cell *matHeaderCellDef> nightlySlide </th>-->
-          <!--<td mat-cell *matCellDef="let element"> {{element.requestBody.nightlySlide}} </td>-->
-        <!--</ng-container>-->
+        <!-- nightlySlide Column -->
+        <ng-container matColumnDef="nightlySlide">
+          <th mat-header-cell *matHeaderCellDef> nightlySlide </th>
+          <td mat-cell *matCellDef="let element"> {{element.requestBody.nightlySlide}} </td>
+        </ng-container>
 
-        <!--&lt;!&ndash; fatigue Column &ndash;&gt;-->
-        <!--<ng-container matColumnDef="fatigue">-->
-          <!--<th mat-header-cell *matHeaderCellDef> fatigue </th>-->
-          <!--<td mat-cell *matCellDef="let element"> {{element.requestBody.fatigue}} </td>-->
-        <!--</ng-container>-->
+        <!-- fatigue Column -->
+        <ng-container matColumnDef="fatigue">
+          <th mat-header-cell *matHeaderCellDef> fatigue </th>
+          <td mat-cell *matCellDef="let element"> {{element.requestBody.fatigue}} </td>
+        </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

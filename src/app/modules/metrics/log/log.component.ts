@@ -21,7 +21,7 @@ import { DataService } from '../../../services/data.service';
 })
 export class LogComponent implements OnInit {
 
-  private displayedColumns: string[] = ['time', 'method', 'endpoint'];
+  private displayedColumns: string[] = ['time', 'method', 'endpoint', 'wellHeight', 'initialClimb', 'nightlySlide', 'fatigue'];
   private dataSource = undefined;
   private isLoading: boolean;
 
