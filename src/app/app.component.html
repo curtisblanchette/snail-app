@@ -1,9 +1,13 @@
-<mat-toolbar>Snail App
+<mat-toolbar>
+  <a routerLink="">
+    <img class="logo" [src]="'assets/4iiz-logo.png'"/>
+  </a>
   <nav>
-    <button mat-button routerLink="">Home</button>
-    <button mat-button routerLink="snail">Snail</button>
+    <button mat-button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</button>
+    <button mat-button routerLink="snail" routerLinkActive="active">Snail</button>
+    <button mat-button routerLink="metrics" routerLinkActive="active">Metrics</button>
   </nav>
-
 </mat-toolbar>
 
 <router-outlet></router-outlet>
+

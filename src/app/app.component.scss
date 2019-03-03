@@ -1,8 +1,17 @@
 :host {
 
   mat-toolbar {
+
+    img.logo {
+      width: 100px;
+    }
+
     nav {
       margin-left: auto;
+
+      button.active {
+        background: rgba(0,0,0,.15);
+      }
     }
   }
 }
