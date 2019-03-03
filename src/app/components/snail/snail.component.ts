@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { SnailService } from '../../services/snail.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-snail-form',
+  selector: 'app-snail-card',
   templateUrl: './snail.component.html',
   styleUrls: ['./snail.component.scss']
 })
@@ -16,9 +16,8 @@ export class SnailFormComponent implements OnInit {
   private result: string = undefined;
 
   constructor(
-    private snailService: SnailService
+    private dataService: DataService
   ) {
-    this.wellHeight = new FormControl('');
     this.result = '';
   }
 
@@ -26,9 +25,14 @@ export class SnailFormComponent implements OnInit {
   }
 
   onClickSolve(): any {
-    this.snailService.solveProblem(this.wellHeight.value, this.initialClimb.value, this.nightlySlide.value, this.fatigue.value)
+    const data = {
+      wellHeight: this.wellHeight.value,
+      initialClimb: this.initialClimb.value,
+      nightlySlide: this.nightlySlide.value,
+      fatigue: this.fatigue.value
+    };
+    this.dataService.solveProblem(data)
       .subscribe((result) => {
-        console.log(result.result);
         this.result = result.result;
       });
   }

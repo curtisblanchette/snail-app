@@ -1,0 +1,18 @@
+:host {
+
+  .container {
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+
+    mat-card {
+      width: 500px;
+      margin-top: 1em;
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

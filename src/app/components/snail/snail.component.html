@@ -1,23 +1,32 @@
-<mat-card>
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Snail Problem</mat-card-title>
+      <mat-card-subtitle>At what day will the snail fail or succeed with the following parameters.</mat-card-subtitle>
+    </mat-card-header>
 
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input matInput type="number" min="" placeholder="Well Height" [formControl]="wellHeight">
-    </mat-form-field>
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" min="0" max="100" placeholder="Well Height" [formControl]="wellHeight">
+        </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <input matInput type="number" placeholder="Initial Climb" [formControl]="initialClimb">
-    </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" min="0" max="100" placeholder="Initial Climb" [formControl]="initialClimb">
+        </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <input matInput type="number" placeholder="Nightly Slide" [formControl]="nightlySlide">
-    </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" min="0" max="100" placeholder="Nightly Slide" [formControl]="nightlySlide">
+        </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <input matInput type="number" placeholder="Fatigue" [formControl]="fatigue">
-    </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput type="number" min="0" max="100" placeholder="Fatigue" [formControl]="fatigue">
+        </mat-form-field>
 
-    <button mat-button (click)="onClickSolve()">Solve</button>
-    <h1 class="">{{result}}</h1>
-  </form>
-</mat-card>
+        <button mat-button mat-flat-button color="primary" (click)="onClickSolve()">Solve</button>
+        <h1 class="">{{result}}</h1>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
