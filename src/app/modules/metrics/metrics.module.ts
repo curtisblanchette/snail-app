@@ -8,12 +8,14 @@ import { MatCardModule, MatProgressSpinnerModule, MatTableModule } from '@angula
 import { AverageSuccessComponent } from './average-success/average-success.component';
 import { DataService } from '../../services/data.service';
 import { ChartModule } from 'angular-highcharts';
+import { OneDecimalPlacePipe } from '../../pipes/one-decimal-place.pipe';
 
 @NgModule({
   declarations: [
     MetricsComponent,
     LogComponent,
-    AverageSuccessComponent
+    AverageSuccessComponent,
+    OneDecimalPlacePipe
   ],
   imports: [
     CommonModule,

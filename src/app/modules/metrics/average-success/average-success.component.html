@@ -29,19 +29,19 @@
         <!-- Time Column -->
         <ng-container matColumnDef="averageDistance">
           <th mat-header-cell *matHeaderCellDef> Total Distance Climbed  </th>
-          <td mat-cell *matCellDef="let element"> {{element.averageTotalDistanceClimbed}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.averageTotalDistanceClimbed | oneDecimalPlace }} </td>
         </ng-container>
 
         <!-- Method Column -->
         <ng-container matColumnDef="averageSuccessDays">
           <th mat-header-cell *matHeaderCellDef> Days to Succeed </th>
-          <td mat-cell *matCellDef="let element"> {{element.averageTime.averageSuccessDays}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.averageTime.averageSuccessDays | oneDecimalPlace}} </td>
         </ng-container>
 
         <!-- Endpoint Column -->
         <ng-container matColumnDef="averageFailureDays">
           <th mat-header-cell *matHeaderCellDef> Days to Fail </th>
-          <td mat-cell *matCellDef="let element"> {{element.averageTime.averageFailureDays}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.averageTime.averageFailureDays | oneDecimalPlace }} </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
