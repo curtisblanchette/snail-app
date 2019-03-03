@@ -6,25 +6,28 @@
     </mat-card-header>
 
     <mat-card-content>
-      <form class="example-form">
+      <form class="example-form" [formGroup]="snailForm">
         <mat-form-field class="example-full-width">
-          <input matInput type="number" min="0" max="100" placeholder="Well Height" [formControl]="wellHeight">
+          <input matInput type="number" min="0" max="100" placeholder="Well Height" formControlName="wellHeight">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput type="number" min="0" max="100" placeholder="Initial Climb" [formControl]="initialClimb">
+          <input matInput type="number" min="0" max="100" placeholder="Initial Climb" formControlName="initialClimb">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput type="number" min="0" max="100" placeholder="Nightly Slide" [formControl]="nightlySlide">
+          <input matInput type="number" min="0" max="100" placeholder="Nightly Slide" formControlName="nightlySlide">
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput type="number" min="0" max="100" placeholder="Fatigue" [formControl]="fatigue">
+          <input matInput type="number" min="0" max="100" placeholder="Fatigue" formControlName="fatigue">
         </mat-form-field>
 
-        <button mat-button mat-flat-button color="primary" (click)="onClickSolve()">Solve</button>
-        <h1 class="" *ngIf="result">{{result}}</h1>
+        <div class="error" *ngIf="!snailForm.valid && !snailForm.untouched">Numbers must be between 0 - 100</div>
+
+        <button mat-button mat-flat-button color="primary" [disabled]="!snailForm.valid" (click)="onClickSolve()">Solve</button>
+
+        <code *ngIf="result"><pre><div class="code-comment">// Result </div>{{result}}</pre></code>
       </form>
     </mat-card-content>
   </mat-card>
