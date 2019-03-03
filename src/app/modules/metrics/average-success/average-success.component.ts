@@ -41,7 +41,7 @@ export class AverageSuccessComponent implements OnInit {
   constructor(
     private dataService: DataService
   ) {
-
+    this.averageDistanceClimbed = 10; // TODO get real data
   }
 
   ngOnInit() {
