@@ -6,24 +6,25 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule,
-  MatToolbarModule
+  MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule, MatToolbarModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SnailFormComponent } from './components/snail/snail.component';
-import { SnailService } from './services/snail.service';
+import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SnailFormComponent,
+    HomeComponent,
+    SnailFormComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -31,9 +32,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatProgressSpinnerModule
   ],
   providers: [
-    SnailService
+    DataService
   ],
   bootstrap: [AppComponent]
 })

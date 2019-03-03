@@ -1,0 +1,13 @@
+:host {
+
+  .loading-container {
+    width: 100%;
+    height: 50px;
+    display:flex;
+    justify-content: space-around;
+  }
+
+  mat-card:not(:first-child) {
+    margin-top: 20px;
+  }
+}

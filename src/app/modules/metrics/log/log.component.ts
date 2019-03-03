@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { LogService } from '../../services/log.service';
-import { Log } from '../../interfaces/log';
+import { Log } from '../../../interfaces/log';
 import * as moment from 'moment';
 import * as _ from 'lodash';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Animation } from '@angular/animations/browser/src/dsl/animation';
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-log-card',
@@ -22,12 +21,12 @@ import { Animation } from '@angular/animations/browser/src/dsl/animation';
 })
 export class LogComponent implements OnInit {
 
-  private displayedColumns: string[] = ['method', 'endpoint', 'time', 'wellHeight', 'initialClimb', 'nightlySlide', 'fatigue'];
+  private displayedColumns: string[] = ['time', 'method', 'endpoint'];
   private dataSource = undefined;
   private isLoading: boolean;
 
   constructor(
-    private logService: LogService
+    private dataService: DataService
   ) {
 
   }
@@ -38,10 +37,10 @@ export class LogComponent implements OnInit {
   }
 
   loadLogs(): any {
-    this.logService.getAllLogs()
+    this.dataService.getAllRequestLogs()
       .subscribe((results: Array<Log>) => {
-        this.dataSource = _.each(results, (result) => {
-          return result.time = moment(result.time).fromNow();
+        this.dataSource = _.forEach(results, (result) => {
+          return result.time = moment(result.time).format('MMMM Do h:mma');
         });
         this.isLoading = false;
       });
