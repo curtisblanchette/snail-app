@@ -27,7 +27,7 @@ export class AverageSuccessComponent implements OnInit {
   private chart = new Chart({
     chart: {
       type: 'bar',
-      height: 200,
+      height: 208,
     },
     title: {
       text: '',

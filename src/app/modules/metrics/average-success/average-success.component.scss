@@ -7,9 +7,10 @@
     justify-content: space-around;
   }
 
-  mat-card-content {
+  .success-rate-card mat-card-content {
     margin: 0 16px;
   }
+
 
   mat-card:not(:first-child) {
     margin-top: 20px;
