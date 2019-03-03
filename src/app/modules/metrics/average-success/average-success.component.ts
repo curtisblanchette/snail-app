@@ -19,6 +19,8 @@ import { Chart } from 'angular-highcharts';
 })
 export class AverageSuccessComponent implements OnInit {
 
+  private isLoading: boolean;
+  private averageDistanceClimbed: number;
   private chart = new Chart({
     chart: {
       type: 'bar',
@@ -34,9 +36,6 @@ export class AverageSuccessComponent implements OnInit {
     series: [
     ]
   });
-
-  private isLoading: boolean;
-  private averageDistanceClimbed: number;
 
   constructor(
     private dataService: DataService
