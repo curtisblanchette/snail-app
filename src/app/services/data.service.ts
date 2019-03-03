@@ -25,7 +25,7 @@ export class DataService {
     return this.http.get<Snail>('http://localhost:3000/logs', httpOptions);
   }
 
-  getAverageSuccessRate(): Observable<any> {
+  getAverages(): Observable<any> {
     return this.http.get<Snail>('http://localhost:3000/results/aggregate', httpOptions);
   }
 

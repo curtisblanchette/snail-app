@@ -14,4 +14,8 @@
   mat-card:not(:first-child) {
     margin-top: 20px;
   }
+
+  table {
+    width: 100%;
+  }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { DataService } from '../../../services/data.service';
 import { Chart } from 'angular-highcharts';
-import { AverageSuccessRateResponse } from '../../../interfaces/average-success-response';
+import { AverageResponse } from '../../../interfaces/average-success-response';
 
 @Component({
   selector: 'app-average-success-card',
@@ -22,6 +22,7 @@ export class AverageSuccessComponent implements OnInit {
 
   private isLoading: boolean;
   private averageDistanceClimbed: number;
+  private displayedColumns: string[] = ['averageDistance', 'averageSuccessDays', 'averageFailureDays'];
   private results: any;
   private chart = new Chart({
     chart: {
@@ -47,16 +48,17 @@ export class AverageSuccessComponent implements OnInit {
 
   async ngOnInit() {
     this.isLoading = true;
-    this.results = await this.loadSuccessRate();
+    this.results = await this.loadAverages();
+    console.log('this.resulsts', this.results);
     this.addChartSeries(this.results);
     this.isLoading = false;
   }
 
-  loadSuccessRate(): Promise<AverageSuccessRateResponse> {
-    return this.dataService.getAverageSuccessRate().toPromise();
+  loadAverages(): Promise<AverageResponse> {
+    return this.dataService.getAverages().toPromise();
   }
 
-  addChartSeries(data: AverageSuccessRateResponse) {
+  addChartSeries(data: AverageResponse) {
     this.chart.addSeries({
       name: 'Success',
       data: [data.successRate.success],
