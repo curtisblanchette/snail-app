@@ -9,6 +9,11 @@
       width: 500px;
       margin-top: 1em;
 
+
+      mat-card-content {
+        margin: 0 16px;
+      }
+
       form {
         display: flex;
         flex-direction: column;

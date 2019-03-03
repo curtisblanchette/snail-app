@@ -2,7 +2,7 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>Snail Problem</mat-card-title>
-      <mat-card-subtitle>At what day will the snail fail or succeed with the following parameters.</mat-card-subtitle>
+      <mat-card-subtitle>At what day will the snail fail or succeed given the following parameters.</mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
@@ -24,7 +24,7 @@
         </mat-form-field>
 
         <button mat-button mat-flat-button color="primary" (click)="onClickSolve()">Solve</button>
-        <h1 class="">{{result}}</h1>
+        <h1 class="" *ngIf="result">{{result}}</h1>
       </form>
     </mat-card-content>
   </mat-card>
