@@ -20,7 +20,7 @@ import { AverageResponse } from '../../../interfaces/average-success-response';
 })
 export class AverageSuccessComponent implements OnInit {
 
-  private isLoading: boolean;
+  public isLoading: boolean;
   private averageDistanceClimbed: number;
   private displayedColumns: string[] = ['averageDistance', 'averageSuccessDays', 'averageFailureDays'];
   private results: any;

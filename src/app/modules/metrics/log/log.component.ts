@@ -23,7 +23,7 @@ export class LogComponent implements OnInit {
 
   private displayedColumns: string[] = ['time', 'method', 'endpoint', 'wellHeight', 'initialClimb', 'nightlySlide', 'fatigue'];
   private dataSource = undefined;
-  private isLoading: boolean;
+  public isLoading: boolean;
 
   constructor(
     private dataService: DataService

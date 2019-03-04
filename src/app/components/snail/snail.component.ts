@@ -9,8 +9,8 @@ import { DataService } from '../../services/data.service';
 })
 export class SnailFormComponent implements OnInit {
 
-  private result: string = undefined;
-  private snailForm: FormGroup = new FormGroup({
+  public result: string = undefined;
+  public snailForm: FormGroup = new FormGroup({
     wellHeight: new FormControl('', [
       Validators.required,
       Validators.min(0),
