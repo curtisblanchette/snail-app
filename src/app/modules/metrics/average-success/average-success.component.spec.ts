@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogComponent } from './average-success.component';
+import { AverageSuccessComponent } from './average-success.component';
 import { expect } from '@angular/platform-browser/testing/src/matchers';
 import { describe } from 'selenium-webdriver/testing';
 
-describe('LogComponent', () => {
-  let component: LogComponent;
-  let fixture: ComponentFixture<LogComponent>;
+describe('AverageSuccessComponent', () => {
+  let component: AverageSuccessComponent;
+  let fixture: ComponentFixture<AverageSuccessComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogComponent ]
+      declarations: [ AverageSuccessComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LogComponent);
+    fixture = TestBed.createComponent(AverageSuccessComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,17 @@
 :host {
   .container {
     padding: 20px;
+    display: flex;
 
+    mat-card {
+      width: 100%;
+    }
     mat-card-content {
       margin: 0 16px;
+    }
+    .col-1,
+    .col-2 {
+      width: 50%;
     }
   }
 }
