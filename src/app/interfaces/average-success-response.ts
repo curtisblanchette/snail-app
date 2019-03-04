@@ -3,8 +3,13 @@ export interface AverageTime {
   averageFailureDays: number;
 }
 
+export interface SuccessRate {
+  success: number;
+  failure: number;
+}
+
 export interface AverageResponse {
-  successRate: any;
+  successRate: SuccessRate;
   averageTotalDistanceClimbed: number;
   averageTime: AverageTime;
 }
