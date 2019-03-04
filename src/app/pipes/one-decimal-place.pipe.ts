@@ -1,7 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /*
  * Raise take a decimal/float number and rounds it to 1 decimal place
- * Takes an exponent argument that defaults to 1.
  * Usage:
  *   value | oneDecimalPlace
  * Example:
